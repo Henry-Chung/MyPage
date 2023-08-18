@@ -32,7 +32,7 @@ body {
 
 header {
   position: relative;
-  height: 800px;
+  height: 1000px;
   min-height: 500px;
   width: 100%;
   background: #161415 url(../images/header-background.jpg) no-repeat top center;
@@ -363,57 +363,86 @@ ul#nav li.current a {
   border-radius: 3px 0 0 3px;
 }
 
+.bar-expand[class*="python"] {
+  width: 90%;
+  -moz-animation: python 2s ease;
+  -webkit-animation: python 2s ease;
+}
+
 .bar-expand[class*="c#"] {
-  width: 85%;
+  width: 80%;
   -moz-animation: csharp 2s ease;
   -webkit-animation: csharp 2s ease;
 }
+.bar-expand[class*="java"] {
+  width: 70%;
+  -moz-animation: java 2s ease;
+  -webkit-animation: java 2s ease;
+}
+
 .bar-expand[class*="c++"] {
   width: 60%;
   -moz-animation: cplusplus 2s ease;
   -webkit-animation: cplusplus 2s ease;
 }
 
-.bar-expand[class*="javascript"] {
-  width: 70%;
-  -moz-animation: javascript 2s ease;
-  -webkit-animation: javascript 2s ease;
+.bar-expand[class*="vb"] {
+  width: 20%;
+  -moz-animation: vb 2s ease;
+  -webkit-animation: vb 2s ease;
 }
 
-.bar-expand[class*="html"] {
-  width: 70%;
+.bar-expand[class*="html/css"] {
+  width: 80%;
   -moz-animation: html 2s ease;
   -webkit-animation: html 2s ease;
 }
 
-.java {
+.bar-expand[class*="javascript/jquery"] {
   width: 85%;
-  -moz-animation: java 2s ease;
-  -webkit-animation: java 2s ease;
+  -moz-animation: javascript 2s ease;
+  -webkit-animation: javascript 2s ease;
 }
 
-.python {
-  width: 60%;
-  -moz-animation: python 2s ease;
-  -webkit-animation: python 2s ease;
+.bar-expand[class*="django"] {
+  width: 80%;
+  -moz-animation: django 2s ease;
+  -webkit-animation: django 2s ease;
 }
 
-.react {
-  width: 50%;
+.bar-expand[class*="react"] {
+  width: 10%;
   -moz-animation: react 2s ease;
   -webkit-animation: react 2s ease;
 }
 
-.sql {
-  width: 90%;
+.bar-expand[class*="angular"] {
+  width: 10%;
+  -moz-animation: react 2s ease;
+  -webkit-animation: react 2s ease;
+}
+
+.bar-expand[class*="sql"] {
+  width: 85%;
   -moz-animation: sql 2s ease;
   -webkit-animation: sql 2s ease;
 }
 
-.vb {
-  width: 30%;
-  -moz-animation: vb 2s ease;
-  -webkit-animation: vb 2s ease;
+
+.bar-expand[class*="mongodb"] {
+  width: 85%;
+  -moz-animation: mongodb 2s ease;
+  -webkit-animation: mongodb 2s ease;
+}
+
+
+@-moz-keyframes python {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
 }
 
 @-moz-keyframes csharp {
@@ -421,7 +450,16 @@ ul#nav li.current a {
     width: 0px;
   }
   100% {
-    width: 85%;
+    width: 80%;
+  }
+}
+
+@-moz-keyframes java {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
   }
 }
 @-moz-keyframes cplusplus {
@@ -432,23 +470,26 @@ ul#nav li.current a {
     width: 60%;
   }
 }
-@-moz-keyframes javascript {
+@-moz-keyframes vb {
   0% {
     width: 0px;
   }
   100% {
-    width: 70%;
+    width: 20%;
   }
 }
+
 @-moz-keyframes html {
   0% {
     width: 0px;
   }
   100% {
-    width: 70%;
+    width: 80%;
   }
 }
-@-moz-keyframes java {
+
+
+@-moz-keyframes javascript {
   0% {
     width: 0px;
   }
@@ -456,39 +497,62 @@ ul#nav li.current a {
     width: 85%;
   }
 }
-@-moz-keyframes python {
+
+
+@-moz-keyframes django {
   0% {
     width: 0px;
   }
   100% {
-    width: 60%;
+    width: 80%;
   }
 }
+
 
 @-moz-keyframes react {
   0% {
     width: 0px;
   }
   100% {
-    width: 50%;
+    width: 10%;
   }
 }
+
+@-moz-keyframes angular {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
 
 @-moz-keyframes sql {
   0% {
     width: 0px;
   }
   100% {
-    width: 90%;
+    width: 85%;
   }
 }
 
-@-moz-keyframes vb {
+@-moz-keyframes mongodb {
   0% {
     width: 0px;
   }
   100% {
-    width: 30%;
+    width: 85%;
+  }
+}
+
+
+@-webkit-keyframes python {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
   }
 }
 
@@ -497,9 +561,18 @@ ul#nav li.current a {
     width: 0px;
   }
   100% {
-    width: 85%;
+    width: 80%;
   }
 }
+@-webkit-keyframes java {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
 @-webkit-keyframes cplusplus {
   0% {
     width: 0px;
@@ -508,23 +581,27 @@ ul#nav li.current a {
     width: 60%;
   }
 }
-@-webkit-keyframes javascript {
+
+@-webkit-keyframes vb {
   0% {
     width: 0px;
   }
   100% {
-    width: 70%;
+    width: 20%;
   }
 }
+
+
 @-webkit-keyframes html {
   0% {
     width: 0px;
   }
   100% {
-    width: 70%;
+    width: 80%;
   }
 }
-@-webkit-keyframes java {
+
+@-webkit-keyframes javascript {
   0% {
     width: 0px;
   }
@@ -532,41 +609,55 @@ ul#nav li.current a {
     width: 85%;
   }
 }
-@-webkit-keyframes python {
+
+@-webkit-keyframes django {
   0% {
     width: 0px;
   }
   100% {
-    width: 60%;
+    width: 80%;
   }
 }
+
 
 @-webkit-keyframes react {
   0% {
     width: 0px;
   }
   100% {
-    width: 50%;
+    width: 10%;
   }
 }
+
+@-webkit-keyframes angular {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
 
 @-webkit-keyframes sql {
   0% {
     width: 0px;
   }
   100% {
-    width: 90%;
+    width: 85%;
   }
 }
 
-@-webkit-keyframes vb {
+@-webkit-keyframes mongodb {
   0% {
     width: 0px;
   }
   100% {
-    width: 30%;
+    width: 85%;
   }
 }
+
+
 
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section
